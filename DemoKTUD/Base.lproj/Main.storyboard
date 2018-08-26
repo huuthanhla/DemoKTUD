@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -25,23 +26,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM1-t0-goB">
-                                <rect key="frame" x="144.5" y="247" width="86" height="50"/>
+                                <rect key="frame" x="144.5" y="383.5" width="86" height="86"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="V75-ue-ixO"/>
+                                    <constraint firstAttribute="width" secondItem="lM1-t0-goB" secondAttribute="height" id="gNT-8n-yA2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Decrease">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled" title="Decrease">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="decreaseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HG6-RY-R6R"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Mi-Hd-WGb" userLabel="Increase">
-                                <rect key="frame" x="144.5" y="370" width="86" height="50"/>
+                                <rect key="frame" x="144.5" y="198.5" width="86" height="86"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="LEK-fC-h10"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="MUB-aZ-GgC"/>
+                                    <constraint firstAttribute="width" secondItem="9Mi-Hd-WGb" secondAttribute="height" id="tZ3-yL-0Hf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="Increase">
@@ -52,8 +55,8 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uS1-rC-f4l" userLabel="Number">
-                                <rect key="frame" x="179.5" y="317" width="15" height="33"/>
-                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <rect key="frame" x="175" y="304.5" width="26" height="59"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="43"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -62,9 +65,9 @@
                         <constraints>
                             <constraint firstItem="lM1-t0-goB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2kX-AQ-hlk"/>
                             <constraint firstItem="9Mi-Hd-WGb" firstAttribute="leading" secondItem="lM1-t0-goB" secondAttribute="leading" id="7Kq-z8-cH0"/>
-                            <constraint firstItem="9Mi-Hd-WGb" firstAttribute="top" secondItem="uS1-rC-f4l" secondAttribute="bottom" constant="20" id="Ag7-n8-bxO"/>
+                            <constraint firstItem="9Mi-Hd-WGb" firstAttribute="bottom" secondItem="uS1-rC-f4l" secondAttribute="top" constant="-20" id="Ag7-n8-bxO"/>
                             <constraint firstItem="uS1-rC-f4l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QTm-Dn-PdW"/>
-                            <constraint firstItem="lM1-t0-goB" firstAttribute="bottom" secondItem="uS1-rC-f4l" secondAttribute="top" constant="-20" id="X5T-Ha-f6u"/>
+                            <constraint firstItem="lM1-t0-goB" firstAttribute="top" secondItem="uS1-rC-f4l" secondAttribute="bottom" constant="20" id="X5T-Ha-f6u"/>
                             <constraint firstItem="9Mi-Hd-WGb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qsp-ah-zqa"/>
                             <constraint firstItem="uS1-rC-f4l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ylP-nz-VCz"/>
                         </constraints>
