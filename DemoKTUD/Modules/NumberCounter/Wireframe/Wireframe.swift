@@ -16,7 +16,7 @@ class NumberWireframe {
     func getModule(initNumber numb: Int) -> UIViewController {
         
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let view = storyboard.instantiateViewController(withIdentifier: String(describing: ViewController.self)) as! ViewController
+        let view = storyboard.instantiateViewController(withIdentifier: String(describing: NumberViewController.self)) as! NumberViewController
         let entity = NumberEntity(value: 3)
         let presenter = NumberPresenter()
         let interactor = NumberInteractor(entity: entity)

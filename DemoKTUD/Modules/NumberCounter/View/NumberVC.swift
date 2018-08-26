@@ -8,17 +8,17 @@
 
 import UIKit
 
-class ViewController: UIViewController, NumberView {
+class NumberViewController: UIViewController {
     
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var decreaseButton: UIButton!
     
-    var numberPresenter:NumberPresenterProtocol?
+    var numberPresenter: NumberPresenterProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.numberPresenter?.getNumber()
+        numberPresenter?.getNumber()
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,20 +26,23 @@ class ViewController: UIViewController, NumberView {
     }
     
     @IBAction func decreaseAction(_ sender: UIButton) {
-        self.numberPresenter?.decrease()
+        numberPresenter?.decrease()
     }
     
     @IBAction func increaseAction(_ sender: UIButton) {
-        self.numberPresenter?.increase()
-    }
-    
-    // Adopt NumberView
-    func setTextNumber(text: String) {
-        self.numberLabel.text = text
-    }
-    
-    func updateDecreaseControl(enabled: Bool) {
-        self.decreaseButton.isEnabled = enabled
+        numberPresenter?.increase()
     }
 }
 
+
+extension NumberViewController: NumberView {
+    
+    // Adopt NumberView
+    func setTextNumber(text: String) {
+        numberLabel.text = text
+    }
+    
+    func updateDecreaseControl(enabled: Bool) {
+        decreaseButton.isEnabled = enabled
+    }
+}

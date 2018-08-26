@@ -12,19 +12,20 @@ class NumberPresenter: NumberPresenterProtocol, NumberInteractorOutput {
     
     weak var numberView: NumberView?
     weak var numberInteractor: NumberInteractorInput?
+    
     var numberWireframe: NumberWireframe? // not use in this project
     
     // Adopt NumberPresenterProtocol
     func increase() {
-        self.numberInteractor?.increase()
+        numberInteractor?.increase()
     }
     
     func decrease() {
-        self.numberInteractor?.decrease()
+        numberInteractor?.decrease()
     }
     
     func getNumber() {
-        self.numberInteractor?.getCurrentValue()
+        numberInteractor?.getCurrentValue()
     }
     
     private func format(number:Int) -> String {
@@ -35,7 +36,7 @@ class NumberPresenter: NumberPresenterProtocol, NumberInteractorOutput {
     func setNumber(number: Int) {
         let text = format(number: number)
         
-        self.numberView?.setTextNumber(text: text)
-        self.numberView?.updateDecreaseControl(enabled: number > 0)
+        numberView?.setTextNumber(text: text)
+        numberView?.updateDecreaseControl(enabled: number > 0)
     }
 }

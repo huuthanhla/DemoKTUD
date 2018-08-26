@@ -11,7 +11,7 @@ import Foundation
 class NumberEntity {
     private var value: Int = 0
     
-    init(value:Int) {
+    init(value: Int) {
         self.value = value
     }
     

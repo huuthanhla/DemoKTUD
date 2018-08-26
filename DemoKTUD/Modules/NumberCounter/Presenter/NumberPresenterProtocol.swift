@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol NumberPresenterProtocol:class {
+protocol NumberPresenterProtocol: class {
     func getNumber()
     func increase()
     func decrease()

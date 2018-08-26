@@ -10,12 +10,12 @@ import Foundation
 
 class NumberInteractor: NumberInteractorInput {
     
-    var numberEntity:NumberEntity?
+    var numberEntity: NumberEntity?
     weak var numberPresenter:NumberInteractorOutput?
     
     
-    init(entity:NumberEntity) {
-        self.numberEntity = entity
+    init(entity: NumberEntity) {
+        numberEntity = entity
     }
     
     // Adopt NumberInteractorInput
@@ -28,17 +28,17 @@ class NumberInteractor: NumberInteractorInput {
     func increase() {
         let currentValue = self.numberEntity?.getValue() ?? 0
         let newValue = currentValue + 1
-        self.numberEntity?.setValue(value: newValue)
+        numberEntity?.setValue(value: newValue)
         
-        self.numberPresenter?.setNumber(number: newValue)
+        numberPresenter?.setNumber(number: newValue)
     }
     
     func decrease() {
         let currentValue = self.numberEntity?.getValue() ?? 0
         let newValue = currentValue - 1
         
-        self.numberEntity?.setValue(value: newValue)
+        numberEntity?.setValue(value: newValue)
         
-        self.numberPresenter?.setNumber(number: newValue)
+        numberPresenter?.setNumber(number: newValue)
     }
 }

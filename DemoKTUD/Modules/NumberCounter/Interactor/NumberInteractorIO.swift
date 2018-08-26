@@ -15,5 +15,5 @@ protocol NumberInteractorInput: class {
 }
 
 protocol NumberInteractorOutput: class {
-    func setNumber(number:Int)
+    func setNumber(number: Int)
 }
