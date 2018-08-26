@@ -8,13 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		1457D052213311E10084B227 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D051213311E10084B227 /* AppDelegate.swift */; };
-		1457D054213311E10084B227 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D053213311E10084B227 /* ViewController.swift */; };
 		1457D057213311E20084B227 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1457D055213311E20084B227 /* Main.storyboard */; };
 		1457D059213311E20084B227 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1457D058213311E20084B227 /* Assets.xcassets */; };
 		1457D05C213311E20084B227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1457D05A213311E20084B227 /* LaunchScreen.storyboard */; };
 		1457D067213311E20084B227 /* DemoKTUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D066213311E20084B227 /* DemoKTUDTests.swift */; };
 		1457D072213311E20084B227 /* DemoKTUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D071213311E20084B227 /* DemoKTUDUITests.swift */; };
-		1457D080213316A80084B227 /* NumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D07F213316A80084B227 /* NumberModel.swift */; };
+		1457D098213328790084B227 /* NumberEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D08C213328790084B227 /* NumberEntity.swift */; };
+		1457D099213328790084B227 /* NumberInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D08E213328790084B227 /* NumberInteractor.swift */; };
+		1457D09A213328790084B227 /* NumberInteractorIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D08F213328790084B227 /* NumberInteractorIO.swift */; };
+		1457D09B213328790084B227 /* NumberPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D091213328790084B227 /* NumberPresenter.swift */; };
+		1457D09C213328790084B227 /* NumberPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D092213328790084B227 /* NumberPresenterProtocol.swift */; };
+		1457D09D213328790084B227 /* NumberVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D094213328790084B227 /* NumberVC.swift */; };
+		1457D09E213328790084B227 /* NumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D095213328790084B227 /* NumberView.swift */; };
+		1457D09F213328790084B227 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D097213328790084B227 /* Wireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +43,6 @@
 /* Begin PBXFileReference section */
 		1457D04E213311E10084B227 /* DemoKTUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoKTUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1457D051213311E10084B227 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1457D053213311E10084B227 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1457D056213311E20084B227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1457D058213311E20084B227 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1457D05B213311E20084B227 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -48,7 +53,14 @@
 		1457D06D213311E20084B227 /* DemoKTUDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemoKTUDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1457D071213311E20084B227 /* DemoKTUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoKTUDUITests.swift; sourceTree = "<group>"; };
 		1457D073213311E20084B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1457D07F213316A80084B227 /* NumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberModel.swift; sourceTree = "<group>"; };
+		1457D08C213328790084B227 /* NumberEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberEntity.swift; sourceTree = "<group>"; };
+		1457D08E213328790084B227 /* NumberInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInteractor.swift; sourceTree = "<group>"; };
+		1457D08F213328790084B227 /* NumberInteractorIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberInteractorIO.swift; sourceTree = "<group>"; };
+		1457D091213328790084B227 /* NumberPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPresenter.swift; sourceTree = "<group>"; };
+		1457D092213328790084B227 /* NumberPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberPresenterProtocol.swift; sourceTree = "<group>"; };
+		1457D094213328790084B227 /* NumberVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberVC.swift; sourceTree = "<group>"; };
+		1457D095213328790084B227 /* NumberView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberView.swift; sourceTree = "<group>"; };
+		1457D097213328790084B227 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +111,8 @@
 		1457D050213311E10084B227 /* DemoKTUD */ = {
 			isa = PBXGroup;
 			children = (
+				1457D089213328790084B227 /* Modules */,
 				1457D051213311E10084B227 /* AppDelegate.swift */,
-				1457D07F213316A80084B227 /* NumberModel.swift */,
-				1457D053213311E10084B227 /* ViewController.swift */,
 				1457D055213311E20084B227 /* Main.storyboard */,
 				1457D058213311E20084B227 /* Assets.xcassets */,
 				1457D05A213311E20084B227 /* LaunchScreen.storyboard */,
@@ -126,6 +137,69 @@
 				1457D073213311E20084B227 /* Info.plist */,
 			);
 			path = DemoKTUDUITests;
+			sourceTree = "<group>";
+		};
+		1457D089213328790084B227 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1457D08A213328790084B227 /* NumberCounter */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		1457D08A213328790084B227 /* NumberCounter */ = {
+			isa = PBXGroup;
+			children = (
+				1457D08B213328790084B227 /* Entity */,
+				1457D08D213328790084B227 /* Interactor */,
+				1457D090213328790084B227 /* Presenter */,
+				1457D093213328790084B227 /* View */,
+				1457D096213328790084B227 /* Wireframe */,
+			);
+			path = NumberCounter;
+			sourceTree = "<group>";
+		};
+		1457D08B213328790084B227 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				1457D08C213328790084B227 /* NumberEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		1457D08D213328790084B227 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				1457D08E213328790084B227 /* NumberInteractor.swift */,
+				1457D08F213328790084B227 /* NumberInteractorIO.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		1457D090213328790084B227 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				1457D091213328790084B227 /* NumberPresenter.swift */,
+				1457D092213328790084B227 /* NumberPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		1457D093213328790084B227 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1457D094213328790084B227 /* NumberVC.swift */,
+				1457D095213328790084B227 /* NumberView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1457D096213328790084B227 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				1457D097213328790084B227 /* Wireframe.swift */,
+			);
+			path = Wireframe;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +336,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1457D054213311E10084B227 /* ViewController.swift in Sources */,
 				1457D052213311E10084B227 /* AppDelegate.swift in Sources */,
-				1457D080213316A80084B227 /* NumberModel.swift in Sources */,
+				1457D099213328790084B227 /* NumberInteractor.swift in Sources */,
+				1457D098213328790084B227 /* NumberEntity.swift in Sources */,
+				1457D09A213328790084B227 /* NumberInteractorIO.swift in Sources */,
+				1457D09B213328790084B227 /* NumberPresenter.swift in Sources */,
+				1457D09F213328790084B227 /* Wireframe.swift in Sources */,
+				1457D09D213328790084B227 /* NumberVC.swift in Sources */,
+				1457D09C213328790084B227 /* NumberPresenterProtocol.swift in Sources */,
+				1457D09E213328790084B227 /* NumberView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
