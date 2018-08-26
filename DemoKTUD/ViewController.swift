@@ -9,17 +9,38 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var numberLabel: UILabel!
+    @IBOutlet weak var decreaseButton: UIButton!
+    
+    var number:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        initDataAndShow()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-
-
+    
+    func initDataAndShow() {
+        number = 3
+        numberLabel.text = "\(number)"
+    }
+    
+    @IBAction func decreaseAction(_ sender: UIButton) {
+        number -= 1
+        numberLabel.text = "\(number)"
+        
+        if number == 0 {
+            decreaseButton.isEnabled = false
+        }
+    }
+    
+    @IBAction func increaseAction(_ sender: UIButton) {
+        number += 1
+        decreaseButton.isEnabled = true
+        numberLabel.text = "\(number)"
+    }
 }
 

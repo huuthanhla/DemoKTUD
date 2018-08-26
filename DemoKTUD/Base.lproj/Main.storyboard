@@ -1,21 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-DemiBold</string>
+            <string>AvenirNext-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DemoKTUD" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM1-t0-goB">
+                                <rect key="frame" x="144.5" y="247" width="86" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="V75-ue-ixO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Decrease">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="decreaseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HG6-RY-R6R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Mi-Hd-WGb" userLabel="Increase">
+                                <rect key="frame" x="144.5" y="370" width="86" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="LEK-fC-h10"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="MUB-aZ-GgC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                <state key="normal" title="Increase">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="increaseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jp6-YP-ZTf"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uS1-rC-f4l" userLabel="Number">
+                                <rect key="frame" x="179.5" y="317" width="15" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lM1-t0-goB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2kX-AQ-hlk"/>
+                            <constraint firstItem="9Mi-Hd-WGb" firstAttribute="leading" secondItem="lM1-t0-goB" secondAttribute="leading" id="7Kq-z8-cH0"/>
+                            <constraint firstItem="9Mi-Hd-WGb" firstAttribute="top" secondItem="uS1-rC-f4l" secondAttribute="bottom" constant="20" id="Ag7-n8-bxO"/>
+                            <constraint firstItem="uS1-rC-f4l" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="QTm-Dn-PdW"/>
+                            <constraint firstItem="lM1-t0-goB" firstAttribute="bottom" secondItem="uS1-rC-f4l" secondAttribute="top" constant="-20" id="X5T-Ha-f6u"/>
+                            <constraint firstItem="9Mi-Hd-WGb" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qsp-ah-zqa"/>
+                            <constraint firstItem="uS1-rC-f4l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ylP-nz-VCz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="decreaseButton" destination="lM1-t0-goB" id="jOo-JH-vMc"/>
+                        <outlet property="numberLabel" destination="uS1-rC-f4l" id="nnb-hJ-9si"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
