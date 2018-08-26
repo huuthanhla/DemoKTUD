@@ -15,6 +15,8 @@
 		1457D067213311E20084B227 /* DemoKTUDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D066213311E20084B227 /* DemoKTUDTests.swift */; };
 		1457D072213311E20084B227 /* DemoKTUDUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D071213311E20084B227 /* DemoKTUDUITests.swift */; };
 		1457D080213316A80084B227 /* NumberModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D07F213316A80084B227 /* NumberModel.swift */; };
+		1457D084213322D20084B227 /* DataBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D083213322D20084B227 /* DataBinding.swift */; };
+		1457D086213323140084B227 /* NumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1457D085213323140084B227 /* NumberViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1457D071213311E20084B227 /* DemoKTUDUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoKTUDUITests.swift; sourceTree = "<group>"; };
 		1457D073213311E20084B227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1457D07F213316A80084B227 /* NumberModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberModel.swift; sourceTree = "<group>"; };
+		1457D083213322D20084B227 /* DataBinding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBinding.swift; sourceTree = "<group>"; };
+		1457D085213323140084B227 /* NumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +105,10 @@
 			children = (
 				1457D051213311E10084B227 /* AppDelegate.swift */,
 				1457D07F213316A80084B227 /* NumberModel.swift */,
+				1457D085213323140084B227 /* NumberViewModel.swift */,
 				1457D053213311E10084B227 /* ViewController.swift */,
 				1457D055213311E20084B227 /* Main.storyboard */,
+				1457D083213322D20084B227 /* DataBinding.swift */,
 				1457D058213311E20084B227 /* Assets.xcassets */,
 				1457D05A213311E20084B227 /* LaunchScreen.storyboard */,
 				1457D05D213311E20084B227 /* Info.plist */,
@@ -263,8 +269,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1457D054213311E10084B227 /* ViewController.swift in Sources */,
+				1457D084213322D20084B227 /* DataBinding.swift in Sources */,
 				1457D052213311E10084B227 /* AppDelegate.swift in Sources */,
 				1457D080213316A80084B227 /* NumberModel.swift in Sources */,
+				1457D086213323140084B227 /* NumberViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
