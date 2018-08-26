@@ -61,7 +61,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="lM1-t0-goB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="2kX-AQ-hlk"/>
                             <constraint firstItem="9Mi-Hd-WGb" firstAttribute="leading" secondItem="lM1-t0-goB" secondAttribute="leading" id="7Kq-z8-cH0"/>
