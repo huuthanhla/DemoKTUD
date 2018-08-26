@@ -9,28 +9,58 @@
 import XCTest
 @testable import DemoKTUD
 
+class NumberViewMock {
+    var textValue = ""
+    var descreaseEnabled = true
+    
+    init(viewModel: NumberViewModel) {
+        viewModel.numberString?.bindAndFire(hdl: { [unowned self] (text) in
+            self.textValue = text
+        })
+        
+        viewModel.decreaseEnabled?.bindAndFire(hdl: { [unowned self] (enabled) in
+            self.descreaseEnabled = enabled
+        })
+    }
+}
+
 class DemoKTUDTests: XCTestCase {
+    var numberViewModel: NumberViewModel!
+    var numberViewMock: NumberViewMock!
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        self.numberViewModel = NumberViewModel(number: 10)
+        self.numberViewMock = NumberViewMock(viewModel: self.numberViewModel)
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testInitValueMustBeTen() {
+        XCTAssert(numberViewMock.textValue == "10", "Init number is not \"10\".")
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testIncreaseNumber() {
+        self.numberViewModel.increaseNumber()
+        
+        XCTAssert(numberViewMock.textValue == "11", "Number is not \"11\" after increased.")
+    }
+    
+    func testDecreaseNumber() {
+        self.numberViewModel.decreaseNumber()
+        
+        XCTAssert(numberViewMock.textValue == "09", "Number is not \"09\" after decreased.")
+    }
+    
+    func testDecreaseDisableWhenNumberIsZero() {
+        for _ in 1...10 {
+            self.numberViewModel.decreaseNumber()
         }
+        
+        XCTAssert(numberViewMock.descreaseEnabled == false, "Decrease control still enabled when number is 0.")
     }
     
 }
