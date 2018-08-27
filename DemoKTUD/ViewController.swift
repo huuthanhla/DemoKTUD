@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var decreaseButton: UIButton!
     
-    var number:Int = 0
+    var number: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,12 +25,12 @@ class ViewController: UIViewController {
     
     func initDataAndShow() {
         number = 3
-        numberLabel.text = "\(number)"
+        updateNumberLabel()
     }
     
     @IBAction func decreaseAction(_ sender: UIButton) {
         number -= 1
-        numberLabel.text = "\(number)"
+        updateNumberLabel()
         
         if number == 0 {
             decreaseButton.isEnabled = false
@@ -40,7 +40,12 @@ class ViewController: UIViewController {
     @IBAction func increaseAction(_ sender: UIButton) {
         number += 1
         decreaseButton.isEnabled = true
-        numberLabel.text = "\(number)"
+        updateNumberLabel()
+    }
+    
+    fileprivate func updateNumberLabel() {
+        numberLabel.text = String(number)
+//        numberLabel.text = String(format: "%02d", number)
     }
 }
 
